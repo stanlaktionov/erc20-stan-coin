@@ -10,10 +10,10 @@ interface Props {
 
 export const TransferToForm: FC<Props> = (props: Props) => {
     const {transferAddress, transferAmount, onTransferAddressChange, onAmountChange, onSubmit} = props;
-    const handleAddressChange = (e) => {
+    const handleAddressChange = (e: any) => {
         onTransferAddressChange(e.target.value);
     };
-    const handleAmountChange = (e) => {
+    const handleAmountChange = (e: any) => {
         onAmountChange(e.target.value);
     };
     return (

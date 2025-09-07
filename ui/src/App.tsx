@@ -10,6 +10,7 @@ const tokenAbi = [
 ];
 
 const tokenContractAddress = '0xB9c9a4965991b46068cd56c1fefD6767C8471363';
+//@ts-ignore
 const provider = new BrowserProvider(window.ethereum!);
 
 
@@ -23,6 +24,7 @@ function App() {
     const signer = await provider.getSigner();
     const address = await signer.getAddress();
     if (userWalletAddress) {
+      //@ts-ignore
       window.ethereum.selectedAddress = null;
       setUserWalletAddress(null);
       setSigner(null);
